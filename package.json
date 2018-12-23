@@ -1,8 +1,8 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
-  "version": "0.17.1",
-  "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
+  "name": "flashy",
+  "productName": "flashy",
+  "version": "0.0.1",
+  "description": "Simple electron + react flashcard app",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development webpack --config ./configs/webpack.config.renderer.dev.dll.babel.js --colors",
@@ -81,18 +81,10 @@
       ]
     },
     "win": {
-      "target": [
-        "nsis",
-        "msi"
-      ]
+      "target": ["nsis", "msi"]
     },
     "linux": {
-      "target": [
-        "deb",
-        "rpm",
-        "snap",
-        "AppImage"
-      ],
+      "target": ["deb", "rpm", "snap", "AppImage"],
       "category": "Development"
     },
     "directories": {
@@ -101,35 +93,18 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "electron-react-boilerplate",
-      "repo": "electron-react-boilerplate",
+      "owner": "ianisborn",
+      "repo": "flashy",
       "private": false
     }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
+    "url": "git+https://github.com/ianisborn/flashy.git"
   },
   "author": {
-    "name": "Electron React Boilerplte Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://electron-react-boilerplate.js.org"
-  },
-  "contributors": [
-    {
-      "name": "Vikram Rangaraj",
-      "email": "vikr01@icloud.com",
-      "url": "https://github.com/vikr01"
-    },
-    {
-      "name": "Amila Welihinda",
-      "email": "amilajack@gmail.com",
-      "url": "https://github.com/amilajack"
-    }
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues"
+    "name": "Ian Smith",
+    "url": "https://ianhenrysmith.com"
   },
   "keywords": [
     "electron",
@@ -142,24 +117,18 @@
     "hot",
     "reload"
   ],
-  "homepage": "https://github.com/electron-react-boilerplate/electron-react-boilerplate#readme",
+  "homepage": "https://github.com/ianisborn/flashy",
   "jest": {
     "testURL": "http://localhost/",
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/fileMock.js",
       "\\.(css|less|sass|scss)$": "identity-obj-proxy"
     },
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "json"
-    ],
+    "moduleFileExtensions": ["js", "jsx", "json"],
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     },
-    "setupFiles": [
-      "./internals/scripts/CheckBuiltsExist.js"
-    ]
+    "setupFiles": ["./internals/scripts/CheckBuiltsExist.js"]
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -275,9 +244,6 @@
     "node": ">=7.x",
     "npm": ">=4.x",
     "yarn": ">=0.21.3"
-  },
-  "collective": {
-    "url": "https://opencollective.com/electron-react-boilerplate-594"
   },
   "browserslist": "electron 1.6"
 }
